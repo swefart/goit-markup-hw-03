@@ -17,11 +17,23 @@ body {
   letter-spacing: 0.02em;
 }
 
+.container {
+  width: 1158px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+}
 /* =========================== /body ===========================*/
 
 /* =========================== cl ===========================*/
 .list {
   list-style: none;
+  padding-left: 0;
 }
 
 .link {
@@ -41,13 +53,32 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 /* =========================== /cl ===========================*/
 
 /* =========================== Header ===========================*/
 
 .header {
+  border-bottom: 1px solid #e7e9fc;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .header-nav {
+  display: flex;
+  align-items: center;
 }
 .logo {
   font-family: 'Raleway';
@@ -57,6 +88,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-color);
+  padding: 24px 0;
 }
 .logo-web {
   font-family: 'Raleway';
@@ -68,6 +100,13 @@ body {
   color: var(--brand-color);
 }
 .header-list {
+  margin-left: 76px;
+  display: flex;
+  width: 347px;
+  /* justify-content: space-between; */
+}
+.header-list > li + li {
+  margin-left: 40px;
 }
 .header-item {
   font-weight: var(--main-font-weight);
@@ -83,8 +122,14 @@ body {
 .address {
 }
 .address-list {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.address-list > li + li {
+  margin-left: 40px;
 }
 .address-item {
+  /* margin-left: 40px; */
   font-style: normal;
   font-size: var(--main-size);
   line-height: 1.5;
@@ -115,6 +160,7 @@ body {
 
 .hero-section {
   background-color: var(--main-color);
+  padding: 188px 0;
 }
 
 .main-title {
@@ -122,6 +168,7 @@ body {
   line-height: 1.07;
   text-align: center;
   color: var(--additional-three-color);
+  margin-bottom: 48px;
 }
 .hero-btn {
   font-weight: var(--main-font-weight);
@@ -131,6 +178,13 @@ body {
   color: var(--additional-two-color);
   background-color: var(--brand-color);
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 16px 32px;
 }
 
 .hero-btn:hover,
@@ -141,13 +195,19 @@ body {
 /* =========================== /Hero ===========================*/
 
 /* =========================== Our Features ===========================*/
+.features-section {
+  margin-top: 120px;
+}
 
 .features-list {
+  display: flex;
+  justify-content: space-between;
+  /* padding-left: 0; */
 }
-.list {
-}
+
 .features-item {
 }
+
 .features-subtitle {
   font-weight: var(--main-font-weight);
   font-size: 20px;
@@ -157,19 +217,22 @@ body {
   font-size: var(--main-size);
   line-height: 1.5;
   color: var(--secondary-color);
+  padding-top: 8px;
+  max-width: 264px;
 }
 
 /* =========================== /Our Features ===========================*/
 
 /* =========================== Our works ===========================*/
 
-.section-title {
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  text-transform: capitalize;
+.works-section {
+  margin-top: 120px;
 }
+
 .works-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
 }
 .list {
 }
@@ -184,24 +247,40 @@ body {
 
 .team-section {
   background-color: var(--additional-two-color);
+  margin-top: 120px 0;
+  padding: 120px 0;
+}
+h2.section-title.team-title {
+  text-align: center;
 }
 
 .team-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 72px;
+  margin-bottom: 0;
 }
 .team-member {
   background-color: var(--additional-three-color);
 }
 .team-photo {
+  margin-bottom: 32px;
+  display: block;
 }
 .team-subtitle {
   font-weight: var(--main-font-weight);
   font-size: 20px;
   line-height: 1.2;
+  text-align: center;
+  margin-bottom: 8px;
 }
 .team-text {
   font-size: var(--main-size);
   line-height: 1.5;
   color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 31px;
 }
 
 /* =========================== /Our team ===========================*/
@@ -210,16 +289,20 @@ body {
 
 .footer {
   background-color: var(--main-color);
+  padding: 100px 0;
 }
 
 .logo-footer {
   color: var(--additional-two-color);
+  display: block;
+  margin-bottom: 12px;
 }
 
 .footer-text {
   font-size: var(--main-size);
   line-height: 1.5;
   color: var(--additional-four-color);
+  max-width: 264px;
 }
 /* =========================== /Footer ===========================*/
 
@@ -228,11 +311,19 @@ Portfolio
 ===========================*/
 
 .portfolio-section {
+  padding-bottom: 120px;
 }
 
 /* =========================== Filters btn ===========================*/
 
 .filters-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 168px;
+  margin-bottom: 0;
+}
+.filters-list > li + li {
+  padding-left: 24px;
 }
 .filters-item {
 }
@@ -247,11 +338,15 @@ Portfolio
   border: 1px solid var(--additional-four-color);
   border-radius: 4px;
   cursor: pointer;
+  padding: 12px 24px;
 }
 .filters-btn:hover,
 .filters-btn:focus {
   background-color: var(--additional-one-color);
   color: var(--additional-three-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: var(--additional-one-color);
 }
 
 /* =========================== /Filters btn ===========================*/
@@ -259,18 +354,33 @@ Portfolio
 /* =========================== results ===========================*/
 
 .results-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 48px;
+  column-gap: 24px;
+  margin-top: 72px;
 }
 .results-item {
+  /* flex-basis: calc((100% - 48px) / 3); */
 }
 .results-link {
 }
 .results-img {
+  display: block;
 }
 .results-subtitle {
   font-weight: var(--main-font-weight);
   font-size: 20px;
   line-height: 1.2;
   color: var(--main-color);
+  padding-bottom: 8px;
+}
+.results-text {
+  padding: 32px 16px 31px 16px;
+  border-bottom: 1px solid var(--additional-four-color);
+  border-left: 1px solid var(--additional-four-color);
+  border-right: 1px solid var(--additional-four-color);
 }
 .results-dsc {
   font-size: var(--main-size);
